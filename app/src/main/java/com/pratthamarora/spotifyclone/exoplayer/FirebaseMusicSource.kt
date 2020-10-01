@@ -35,7 +35,7 @@ class FirebaseMusicSource @Inject constructor(
             }
         }
 
-    fun onReady(action: (Boolean) -> Unit): Boolean {
+    fun whenReady(action: (Boolean) -> Unit): Boolean {
         return if (state == CREATED || state == INITIALIZING) {
             onReadyListeners += action
             false
@@ -83,7 +83,7 @@ class FirebaseMusicSource @Inject constructor(
             .setIconUri(it.description.iconUri)
             .build()
         MediaBrowserCompat.MediaItem(desc, FLAG_PLAYABLE)
-    }
+    }.toMutableList()
 
 }
 
