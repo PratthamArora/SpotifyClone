@@ -1,8 +1,8 @@
-package com.pratthamarora.spotifyclone
+package com.pratthamarora.spotifyclone.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import dagger.hilt.android.AndroidEntryPoint
+import com.pratthamarora.spotifyclone.R
 
 class MainActivity : AppCompatActivity() {
 
