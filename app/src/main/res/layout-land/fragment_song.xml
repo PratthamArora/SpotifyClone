@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.activity.MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvSongName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        tools:text="SONG NAME"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivSongImage"
-        app:layout_constraintTop_toTopOf="@+id/ivSongImage" />
+        app:layout_constraintTop_toTopOf="@+id/ivSongImage"
+        tools:text="SONG NAME" />
 
     <ImageView
         android:id="@+id/ivSongImage"
@@ -32,13 +32,13 @@
         android:id="@+id/tvCurTime"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        tools:text="00:00"
         android:layout_marginStart="16dp"
+        android:gravity="center"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintStart_toEndOf="@+id/ivSongImage"
-        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+        app:layout_constraintTop_toTopOf="@+id/seekBar"
+        tools:text="00:00" />
 
     <SeekBar
         android:id="@+id/seekBar"
@@ -53,13 +53,13 @@
         android:id="@+id/tvSongDuration"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        tools:text="00:00"
         android:layout_marginEnd="16dp"
+        android:gravity="center"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+        app:layout_constraintTop_toTopOf="@+id/seekBar"
+        tools:text="00:00" />
 
     <ImageView
         android:id="@+id/ivPlayPauseDetail"

@@ -1,4 +1,4 @@
-package com.pratthamarora.spotifyclone.adapters
+package com.pratthamarora.spotifyclone.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View
