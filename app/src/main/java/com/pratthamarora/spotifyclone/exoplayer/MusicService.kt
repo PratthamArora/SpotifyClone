@@ -31,7 +31,6 @@ private const val SERVICE_TAG = "MusicService"
 @AndroidEntryPoint
 class MusicService : MediaBrowserServiceCompat() {
 
-
     @Inject
     lateinit var dataSourceFactory: DefaultDataSourceFactory
 
