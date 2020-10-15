@@ -3,14 +3,10 @@ package com.pratthamarora.spotifyclone.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
-import com.bumptech.glide.RequestManager
 import com.pratthamarora.spotifyclone.R
 import kotlinx.android.synthetic.main.list_item.view.*
-import javax.inject.Inject
 
-class SongAdapter @Inject constructor(
-    private val glide: RequestManager
-) : BaseSongAdapter(R.layout.list_item) {
+class SwipeSongAdapter : BaseSongAdapter(R.layout.list_item) {
 
     override val differ = AsyncListDiffer(this, differCallBack)
 
@@ -24,9 +20,8 @@ class SongAdapter @Inject constructor(
         val song = songs[position]
 
         holder.itemView.apply {
-            tvPrimary.text = song.title
-            tvSecondary.text = song.subtitle
-            glide.load(song.imageUrl).into(ivItemImage)
+            val text = "${song.title} - ${song.subtitle}"
+            tvPrimary.text = text
 
             setOnClickListener {
                 onItemClickListener?.let { listener ->
@@ -35,5 +30,4 @@ class SongAdapter @Inject constructor(
             }
         }
     }
-
 }
