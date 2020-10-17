@@ -1,7 +1,5 @@
 package com.pratthamarora.spotifyclone.ui.adapters
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import com.bumptech.glide.RequestManager
 import com.pratthamarora.spotifyclone.R
@@ -13,12 +11,6 @@ class SongAdapter @Inject constructor(
 ) : BaseSongAdapter(R.layout.list_item) {
 
     override val differ = AsyncListDiffer(this, differCallBack)
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongsViewHolder {
-        return SongsViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
-        )
-    }
 
     override fun onBindViewHolder(holder: SongsViewHolder, position: Int) {
         val song = songs[position]
